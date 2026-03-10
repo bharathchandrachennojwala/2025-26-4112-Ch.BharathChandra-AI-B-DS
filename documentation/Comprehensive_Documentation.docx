@@ -1,0 +1,80 @@
+# Comprehensive Documentation
+
+## Week 1: Data Structures
+
+### Lists
+```python
+# Python code for lists
+my_list = [1, 2, 3, 4, 5]
+print(my_list)
+```
+**Output:**
+```
+[1, 2, 3, 4, 5]
+```
+
+### Tuples
+```python
+# Python code for tuples
+my_tuple = (1, 2, 3, 4, 5)
+print(my_tuple)
+```
+**Output:**
+```
+(1, 2, 3, 4, 5)
+```
+
+### Dictionaries
+```python
+# Python code for dictionaries
+my_dict = {'a': 1, 'b': 2}
+print(my_dict)
+```
+**Output:**
+```
+{'a': 1, 'b': 2}
+```
+
+### Sets
+```python
+# Python code for sets
+my_set = {1, 2, 3, 4, 5}
+print(my_set)
+```
+**Output:**
+```
+{1, 2, 3, 4, 5}
+```
+
+### Dataset Operations
+```python
+# Example code for dataset operations
+# Assume datasets are loaded
+```
+**Output:**
+```
+# Corresponding outputs
+```
+
+### File Operations
+```python
+# Example code for file operations
+with open('file.txt', 'w') as f:
+    f.write("Hello World")
+```
+**Output:**
+```
+# File created successfully
+```
+
+## Week 2: Algorithms and Data Manipulation
+
+### Searching Algorithms
+```python
+# Example code for searching algorithms
+```
+**Output:**
+```
+# Corresponding outputs
+```
+...
