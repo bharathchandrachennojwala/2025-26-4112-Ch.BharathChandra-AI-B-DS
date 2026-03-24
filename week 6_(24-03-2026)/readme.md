@@ -1,6 +1,6 @@
 Questions
 
-23)Write a code to implement linear regression on anyy sample dataset
+23)Write a code to implement linear regression on any sample dataset
 
 24)Write a code to implement linear regression with example url
 
