@@ -1,6 +1,6 @@
 16)Write a python code to perform the following database operations using SQLite(CRUD Operations)
 
-7)Write the python code to perform the following operations to clean the data
+17)Write the python code to perform the following operations to clean the data
   
   a. Missing values
   
