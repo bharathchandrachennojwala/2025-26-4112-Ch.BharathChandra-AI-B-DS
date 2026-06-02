@@ -1,0 +1,169 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNw+6wcgUatebuahpOlF51X",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/bharathchandrachennojwala/2025-26-4112-Ch.BharathChandra-AI-B-DS/blob/main/week9\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "32)Implement the lasso model"
+      ],
+      "metadata": {
+        "id": "kZ6FJvVLDOSg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9A5zQDwmVTLQ",
+        "outputId": "80e47cf0-7b78-4827-b4f6-1bd4ef543dbe"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Coefficient: [2.38401043 0.37573922 0.8398587 ]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "from sklearn.linear_model import Lasso\n",
+        "X=np.array([[1,5,2],[2,6,4],[4,3,6],[7,6,2]])\n",
+        "Y=np.array([5,10,15,20])\n",
+        "model=Lasso(alpha=0.1)\n",
+        "model.fit(X,Y)\n",
+        "print(\"Coefficient:\",model.coef_)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "33)Implement the similarities and distances for any data set\n"
+      ],
+      "metadata": {
+        "id": "GY5Slm61DYaX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "A=np.array([[2,3],[3,4],[4,2]])\n",
+        "B=np.array([[8,7],[9,6],[10,8]])\n",
+        "P=np.array([5,5])\n",
+        "cA=A.mean(axis=0)\n",
+        "cB=B.mean(axis=0)\n",
+        "dA=np.linalg.norm(P-cA)\n",
+        "dB=np.linalg.norm(P-cB)\n",
+        "if dA<dB:\n",
+        "  print(\"Point belongs to cluster A\")\n",
+        "else:\n",
+        "  print(\"Point belongs to cluster B\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B4dxoR6pDbqP",
+        "outputId": "bd89c6bf-c3ab-403a-8cd6-f97bf95c0c9e"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Point belongs to cluster A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "34)Write a code to implement K-means clustering (unsupervised learning)algorithm"
+      ],
+      "metadata": {
+        "id": "RFCDMIx6Ddhf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "from scipy.spatial import distance\n",
+        "from scipy.stats import pearsonr\n",
+        "p1=np.array([2,3])\n",
+        "p2=np.array([5,7])\n",
+        "euc=distance.euclidean(p1,p2)\n",
+        "mh=distance.cityblock(p1,p2)\n",
+        "cb=distance.chebyshev(p1,p2)\n",
+        "hm=distance.hamming(p1,p2)\n",
+        "cd=distance.cosine(p1,p2)\n",
+        "cs=1-cd\n",
+        "set1,set2=set(p1),set(p2)\n",
+        "js=len(set1.intersection(set2))/len(set1.union(set2))\n",
+        "r,_=pearsonr(p1,p2)\n",
+        "print(\"Euclidean Distance:\",euc)\n",
+        "print(\"Manhattan Distance:\",mh)\n",
+        "print(\"Chebyshev Distance:\",cb)\n",
+        "print(\"Hamming Distance:\",hm)\n",
+        "print(\"Cosine Similarity:\",cs)\n",
+        "print(\"Pearson Correlation:\",r)\n",
+        "print(\"Jaccard Similarity:\",js)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KsVxtuWGDh5f",
+        "outputId": "1000efe2-23fc-4ae3-ffc4-02cb1c618bd9"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Euclidean Distance: 5.0\n",
+            "Manhattan Distance: 7\n",
+            "Chebyshev Distance: 4\n",
+            "Hamming Distance: 1.0\n",
+            "Cosine Similarity: 0.9994801143396995\n",
+            "Pearson Correlation: 1.0\n",
+            "Jaccard Similarity: 0.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
